@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Tshedza Systems – We Engineer Digital Growth That Actually Scales</title>
+  <meta name="description" content="Smart digital systems. Real growth. Measurable results. AI Automation, SEO, Google Ads, Email Marketing & Website Development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Nav overlay (page dim + blur when menu opens) -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <div class="logo-hex">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="30,3 55,17 55,43 30,57 5,43 5,17" fill="none" stroke="url(#hexGrad)" stroke-width="2"/>
+            <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-weight="700" font-size="17" fill="url(#hexGrad)">TS</text>
+            <defs>
+              <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00d4aa"/><stop offset="100%" stop-color="#00b4d8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Tshedza<span class="logo-accent">Systems</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#why-us" class="nav-link">Why Us</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/27614141964?text=Hi%20Tshedza%20Systems%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" class="nav-cta">Free Consult</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" alt="" class="hero-bg-img" id="heroBgImg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-gradient-1"></div>
+      <div class="hero-gradient-2"></div>
+    </div>
+    <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal-fade">
+        <span class="badge-dot"></span>
+        Smart Systems. Real Growth. Measurable Results.
+      </div>
+      <h1 class="hero-heading">
+        <span class="line" data-delay="0">We engineer</span>
+        <span class="line gradient-text" data-delay="120">digital growth</span>
+        <span class="line" data-delay="240">that actually scales.</span>
+      </h1>
+      <p class="hero-sub reveal-fade" style="animation-delay:0.7s">
+        From AI-powered automation to high-converting campaigns — we build intelligent digital systems that attract customers, cut costs, and grow your revenue.
+      </p>
+      <div class="hero-cta reveal-fade" style="animation-delay:0.9s">
+        <a href="https://wa.me/27614141964?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%2030%20minute%20consultation." target="_blank" class="btn btn-primary">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.927a.75.75 0 0 0 .916.916l6.082-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.516-5.175-1.415l-.371-.22-3.849.93.93-3.849-.22-.37A9.964 9.964 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Book Free Consultation
+        </a>
+        <a href="#services" class="btn btn-ghost">
+          Explore Services
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <a href="#services" class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Digital Systems Built <em>to Perform</em></h2>
+        <p class="section-desc">Every service is engineered to work together — creating a growth system that attracts, converts, and retains customers at scale.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal-up" data-delay="0">
+          <div class="service-card-glow"></div>
+          <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Modern, fast, responsive websites built from scratch to attract visitors and convert them into paying customers.</p>
+          <ul class="service-features">
+            <li>Custom responsive design</li>
+            <li>Speed &amp; performance optimized</li>
+            <li>SEO-ready architecture</li>
+            <li>Mobile-first approach</li>
+          </ul>
+          <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Website Development" loading="lazy" /></div>
+          <a href="#contact" class="service-link">Get Started <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="100">
+          <div class="service-card-glow blue-glow"></div>
+          <div class="service-icon blue-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg></div>
+          <h3 class="service-title">AI Automation</h3>
+          <p class="service-desc">Automate repetitive tasks, streamline customer interactions, and unlock operational efficiency at scale.</p>
+          <ul class="service-features">
+            <li>Workflow automation</li>
+            <li>AI chatbot integration</li>
+            <li>CRM automation</li>
+            <li>Lead nurturing systems</li>
+          </ul>
+          <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="AI Automation" loading="lazy" /></div>
+          <a href="#contact" class="service-link">Get Started <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="200">
+          <div class="service-card-glow green-glow"></div>
+          <div class="service-icon green-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+          <h3 class="service-title">SEO Services</h3>
+          <p class="service-desc">Dominate search rankings and drive consistent organic traffic with a data-driven SEO strategy.</p>
+          <ul class="service-features">
+            <li>On-page SEO &amp; metadata</li>
+            <li>Keyword research &amp; strategy</li>
+            <li>Speed &amp; Core Web Vitals</li>
+            <li>Monthly performance reports</li>
+          </ul>
+          <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&q=80" alt="SEO Services" loading="lazy" /></div>
+          <a href="#contact" class="service-link">Get Started <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="300">
+          <div class="service-card-glow yellow-glow"></div>
+          <div class="service-icon yellow-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3 class="service-title">Google Ads Management</h3>
+          <p class="service-desc">High-performance campaigns that reach the right audience at the right moment — turning spend into revenue.</p>
+          <ul class="service-features">
+            <li>Keyword research &amp; bidding</li>
+            <li>Campaign setup &amp; structure</li>
+            <li>Conversion tracking</li>
+            <li>Audience targeting &amp; retargeting</li>
+          </ul>
+          <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&q=80" alt="Google Ads" loading="lazy" /></div>
+          <a href="#contact" class="service-link">Get Started <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+        <div class="service-card reveal-up" data-delay="400">
+          <div class="service-card-glow purple-glow"></div>
+          <div class="service-icon purple-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+          <h3 class="service-title">Email Marketing</h3>
+          <p class="service-desc">Build lasting relationships and drive repeat revenue with branded campaigns and intelligent automation flows.</p>
+          <ul class="service-features">
+            <li>Mailchimp / Brevo setup</li>
+            <li>Branded email templates</li>
+            <li>Automation &amp; drip flows</li>
+            <li>Welcome &amp; nurture sequences</li>
+          </ul>
+          <div class="service-img-wrap"><img src="https://images.unsplash.com/photo-1526628953301-3cd0e1bd1e5d?w=600&q=80" alt="Email Marketing" loading="lazy" /></div>
+          <a href="#contact" class="service-link">Get Started <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us" id="why-us">
+    <div class="why-bg-glow"></div>
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-left reveal-left">
+          <span class="section-label">Why Tshedza Systems</span>
+          <h2 class="section-title">Built Different. <em>Built to Last.</em></h2>
+          <p class="section-desc">We don't just deliver services — we engineer complete digital growth systems tailored to your business, your market, and your goals.</p>
+          <div class="why-checks">
+            <div class="why-check"><div class="check-icon">✓</div><div><strong>More Visibility</strong><p>Rank higher, reach wider, and be found where your customers are searching.</p></div></div>
+            <div class="why-check"><div class="check-icon">✓</div><div><strong>More Customers</strong><p>Targeted strategies that convert real prospects into paying clients.</p></div></div>
+            <div class="why-check"><div class="check-icon">✓</div><div><strong>More Freedom</strong><p>Automated systems that run for you — so you can focus on what matters.</p></div></div>
+            <div class="why-check"><div class="check-icon">✓</div><div><strong>More Revenue</strong><p>Everything we build is designed with one goal: profitable growth.</p></div></div>
+          </div>
+          <a href="https://wa.me/27614141964?text=Hi%20Tshedza%20Systems%21%20I%27d%20like%20to%20learn%20more." target="_blank" class="btn btn-primary">Talk to Us on WhatsApp</a>
+        </div>
+        <div class="why-right reveal-right">
+          <div class="why-cards">
+            <div class="why-card"><div class="wc-num">01</div><h4>Strategy First</h4><p>Every project starts with a tailored digital strategy — no cookie-cutter solutions.</p></div>
+            <div class="why-card"><div class="wc-num">02</div><h4>Data-Driven</h4><p>Every decision is backed by analytics, testing, and real performance data.</p></div>
+            <div class="why-card"><div class="wc-num">03</div><h4>Local Expertise</h4><p>Deep knowledge of the South African market — and global best practices.</p></div>
+            <div class="why-card"><div class="wc-num">04</div><h4>Ongoing Support</h4><p>We stay with you — monitoring, optimizing, and growing your results over time.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 class="section-title">Packages That <em>Grow With You</em></h2>
+        <p class="section-desc">Includes a FREE 30-minute consultation — zero commitment, zero risk.</p>
+      </div>
+
+      <div class="free-consult-banner reveal-up">
+        <div class="fc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="fc-text">
+          <strong>Free 30-Minute Strategy Consultation</strong>
+          <span>Book a no-obligation call and get a custom digital growth plan for your business.</span>
+        </div>
+        <a href="https://wa.me/27614141964?text=Hi%21%20I%27d%20like%20to%20book%20my%20free%2030-minute%20consultation." target="_blank" class="btn btn-primary">Book Free Call</a>
+      </div>
+
+      <div class="pricing-divider reveal-up">
+        <div class="pd-line"></div>
+        <span>One-Time Project Pricing</span>
+        <div class="pd-line"></div>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card reveal-up" data-delay="0">
+          <div class="pjc-icon app-col"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+          <div class="pjc-tag">Custom Build</div>
+          <h3 class="pjc-title">App Development</h3>
+          <div class="pjc-price"><span class="pjc-from">Starting from</span><span class="pjc-amount">R4,500</span></div>
+          <p class="pjc-sub">For MVPs, booking apps, dashboards and client portals</p>
+          <ul class="pjc-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Simple MVPs &amp; booking apps</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Web apps &amp; dashboards</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Client portals</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Advanced apps: R8,000 – R25,000</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20App%20Development." target="_blank" class="btn btn-ghost w-full">Get Started</a>
+        </div>
+
+        <div class="project-card featured-project reveal-up" data-delay="100">
+          <div class="pjc-badge">Most Popular</div>
+          <div class="pjc-icon web-col"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="pjc-tag">Most Popular</div>
+          <h3 class="pjc-title">Web Development</h3>
+          <div class="pjc-price"><span class="pjc-from">Starting from</span><span class="pjc-amount">R2,000</span></div>
+          <p class="pjc-sub">Landing pages, business sites and e-commerce stores</p>
+          <ul class="pjc-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Basic landing pages: R2,000</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Business websites: R3,500 – R7,500</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>E-commerce stores: R7,500 – R15,000</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Clean, professional designs</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20Web%20Development." target="_blank" class="btn btn-primary w-full">Get Started</a>
+        </div>
+
+        <div class="project-card reveal-up" data-delay="200">
+          <div class="pjc-icon ai-col"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><circle cx="9" cy="10" r="1" fill="currentColor"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg></div>
+          <div class="pjc-tag">Automation</div>
+          <h3 class="pjc-title">AI Automations</h3>
+          <div class="pjc-price"><span class="pjc-from">Starting from</span><span class="pjc-amount">R600</span></div>
+          <p class="pjc-sub">Chat bots, voice agents and workflow automation</p>
+          <ul class="pjc-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Chat bots: R800 – R4,500</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Voice AI (Retell): R2,000 – R9,000</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Workflows: R600 – R8,000</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp, website &amp; CRM integrations</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20AI%20Automations." target="_blank" class="btn btn-ghost w-full">Get Started</a>
+        </div>
+      </div>
+
+      <div class="pricing-divider reveal-up" style="margin-top:72px;">
+        <div class="pd-line"></div>
+        <span>Monthly Maintenance Plans</span>
+        <div class="pd-line"></div>
+      </div>
+
+      <div class="monthly-grid">
+        <div class="monthly-card reveal-up" data-delay="0">
+          <div class="mc-tier">Starter</div>
+          <div class="mc-price">R250<span>/month</span></div>
+          <ul class="mc-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Minor fixes</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Basic monitoring</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email support</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20the%20Starter%20plan." target="_blank" class="btn btn-ghost w-full">Get Started</a>
+        </div>
+
+        <div class="monthly-card featured-monthly reveal-up" data-delay="100">
+          <div class="mc-badge">Best Value</div>
+          <div class="mc-tier">Business</div>
+          <div class="mc-price">R450<span>/month</span></div>
+          <ul class="mc-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 1 hour updates</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Priority assistance</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Workflow checks</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20the%20Business%20plan." target="_blank" class="btn btn-primary w-full">Get Started</a>
+        </div>
+
+        <div class="monthly-card reveal-up" data-delay="200">
+          <div class="mc-tier">Pro</div>
+          <div class="mc-price">R900<span>+/month</span></div>
+          <ul class="mc-list">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Full support</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Feature updates</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Automation monitoring &amp; optimization</li>
+          </ul>
+          <a href="https://wa.me/27614141964?text=Hi%21%20I%27m%20interested%20in%20the%20Pro%20plan." target="_blank" class="btn btn-ghost w-full">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-label">Our Work</span>
+        <h2 class="section-title">Results That <em>Speak for Themselves</em></h2>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item reveal-up" data-delay="0">
+          <div class="pi-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="E-Commerce" loading="lazy" /></div>
+          <div class="pi-info"><span class="pi-tag">Google Ads + SEO</span><h4>E-Commerce Revenue Growth</h4><p class="pi-result">Consistent lead growth through targeted campaigns</p></div>
+        </div>
+        <div class="portfolio-item tall reveal-up" data-delay="100">
+          <div class="pi-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="SaaS" loading="lazy" /></div>
+          <div class="pi-info"><span class="pi-tag">Website + AI Automation</span><h4>SaaS Platform Launch</h4><p class="pi-result">Full-stack web app with automated onboarding flows</p></div>
+        </div>
+        <div class="portfolio-item reveal-up" data-delay="200">
+          <div class="pi-img"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=700&q=80" alt="Email" loading="lazy" /></div>
+          <div class="pi-info"><span class="pi-tag">Email Marketing</span><h4>Retail Email Campaign</h4><p class="pi-result">Branded templates with automated nurture sequences</p></div>
+        </div>
+        <div class="portfolio-item reveal-up" data-delay="300">
+          <div class="pi-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=700&q=80" alt="SEO" loading="lazy" /></div>
+          <div class="pi-info"><span class="pi-tag">SEO Services</span><h4>Local Business SEO</h4><p class="pi-result">Optimized structure, metadata, and page speed</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left reveal-left">
+          <span class="section-label">Get in Touch</span>
+          <h2 class="section-title">Let's Build Your <em>Digital Growth System</em></h2>
+          <p class="section-desc">Book a FREE 30-minute consultation and walk away with a custom strategy — no strings attached, no hard sell.</p>
+          <div class="contact-channels">
+            <a href="https://wa.me/27614141964?text=Hi%20Tshedza%20Systems%21%20I%27d%20like%20to%20discuss%20my%20project." target="_blank" class="channel-btn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.927a.75.75 0 0 0 .916.916l6.082-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.516-5.175-1.415l-.371-.22-3.849.93.93-3.849-.22-.37A9.964 9.964 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              +27 61 414 1964
+            </a>
+            <a href="mailto:info@techdzasystems.co.za" class="channel-btn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              info@techdzasystems.co.za
+            </a>
+            <a href="https://www.techdzasystems.com" target="_blank" class="channel-btn">
+              <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#00d4aa" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+              www.techdzasystems.com
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal-right">
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <!-- Status message -->
+            <div id="formStatus" class="form-status" style="display:none;"></div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your full name" id="formName" />
+              </div>
+              <div class="form-group">
+                <label>Your Email</label>
+                <input type="email" placeholder="your@email.com" id="formEmail" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Service Interested In</label>
+              <select id="formService">
+                <option value="">Select a service...</option>
+                <option>App Development</option>
+                <option>Web Development</option>
+                <option>AI Automations</option>
+                <option>SEO Services</option>
+                <option>Google Ads Management</option>
+                <option>Email Marketing</option>
+                <option>Monthly Maintenance Plan</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="Tell us about your business and goals..." rows="4" id="formMsg"></textarea>
+            </div>
+            <button class="btn btn-primary w-full" id="formSubmit">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span id="formBtnText">Send Message</span>
+            </button>
+            <p class="form-note">We'll reply within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-hex small">
+              <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="30,3 55,17 55,43 30,57 5,43 5,17" fill="none" stroke="url(#hexGrad2)" stroke-width="2"/>
+                <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-weight="700" font-size="17" fill="url(#hexGrad2)">TS</text>
+                <defs><linearGradient id="hexGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00d4aa"/><stop offset="100%" stop-color="#00b4d8"/></linearGradient></defs>
+              </svg>
+            </div>
+            <span class="logo-text">Tshedza<span class="logo-accent">Systems</span></span>
+          </a>
+          <p>Smart Systems. Real Results.<br />Grow Your Business Online.</p>
+        </div>
+        <div class="footer-links-group">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">SEO Services</a></li>
+            <li><a href="#services">Google Ads</a></li>
+            <li><a href="#services">Email Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5>Contact</h5>
+          <a href="https://wa.me/27614141964" target="_blank" class="footer-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.927a.75.75 0 0 0 .916.916l6.082-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.516-5.175-1.415l-.371-.22-3.849.93.93-3.849-.22-.37A9.964 9.964 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            +27 61 414 1964
+          </a>
+          <a href="mailto:info@techdzasystems.co.za" class="footer-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            info@techdzasystems.co.za
+          </a>
+          <a href="https://www.techdzasystems.com" target="_blank" class="footer-contact-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg>
+            techdzasystems.com
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Tshedza Systems. All rights reserved.</p>
+        <p class="footer-tagline">Smart Systems. Real Results. Grow Your Business Online.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp — small icon circle -->
+  <a href="https://wa.me/27614141964?text=Hi%20Tshedza%20Systems%21%20I%27d%20like%20to%20chat." target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.555 4.116 1.527 5.845L.057 23.927a.75.75 0 0 0 .916.916l6.082-1.47A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.66-.516-5.175-1.415l-.371-.22-3.849.93.93-3.849-.22-.37A9.964 9.964 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
