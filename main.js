@@ -368,7 +368,7 @@ formSubmit.addEventListener("click", function (e) {
   formSubmit.disabled = true;
 
   // EmailJS send
-  emailjs.send("service_9rm2r1s", "template_n68a3sk", {
+  emailjs.send("service_gl2wl5n", "template_n68a3sk", {
     from_name: name,
     from_email: email,
     service: service,
