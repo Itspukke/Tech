@@ -338,3 +338,69 @@ window.addEventListener('load', () => {
 document.body.style.opacity = '0';
 document.body.style.transition = 'opacity 0.45s ease';
 window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+
+
+// CONTACT FORM EMAILJS
+
+const formSubmit = document.getElementById("formSubmit");
+const formStatus = document.getElementById("formStatus");
+const formBtnText = document.getElementById("formBtnText");
+
+formSubmit.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Get form values
+  const name = document.getElementById("formName").value;
+  const email = document.getElementById("formEmail").value;
+  const service = document.getElementById("formService").value;
+  const message = document.getElementById("formMsg").value;
+
+  // Validation
+  if (!name || !email || !service || !message) {
+    formStatus.style.display = "block";
+    formStatus.style.color = "#ff4d4d";
+    formStatus.innerHTML = "Please fill in all fields.";
+    return;
+  }
+
+  // Loading state
+  formBtnText.innerHTML = "Sending...";
+  formSubmit.disabled = true;
+
+  // EmailJS send
+  emailjs.send("service_9rm2r1s", "template_n68a3sk", {
+    from_name: name,
+    from_email: email,
+    service: service,
+    message: message,
+  })
+  .then(function () {
+
+    formStatus.style.display = "block";
+    formStatus.style.color = "#00d4aa";
+    formStatus.innerHTML = "Message sent successfully!";
+
+    // Reset form
+    document.getElementById("formName").value = "";
+    document.getElementById("formEmail").value = "";
+    document.getElementById("formService").value = "";
+    document.getElementById("formMsg").value = "";
+
+  })
+  .catch(function (error) {
+
+    console.error("EmailJS Error:", error);
+
+    formStatus.style.display = "block";
+    formStatus.style.color = "#ff4d4d";
+    formStatus.innerHTML = "Failed to send message.";
+
+  })
+  .finally(function () {
+
+    formBtnText.innerHTML = "Send Message";
+    formSubmit.disabled = false;
+
+  });
+
+});
