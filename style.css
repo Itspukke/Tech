@@ -259,14 +259,30 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   display: flex; flex-direction: column; align-items: center;
 }
 .hero-badge {
-  display: flex; align-items: center; gap: 9px;
-  padding: 8px 20px; background: var(--glass); border: 1px solid var(--glass-b);
-  border-radius: 50px; font-size: .79rem; font-weight: 500; color: var(--w60);
-  letter-spacing: .04em; margin-bottom: 28px; backdrop-filter: blur(10px);
-  opacity: 0; animation: fadeUp .8s .2s forwards;
-  margin-inline: auto;
-  flex-wrap: wrap;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 9px;
+
+  max-width: 92vw;
+
+  padding: 8px 20px;
+
+  background: var(--glass);
+  border: 1px solid var(--glass-b);
+  border-radius: 50px;
+
+  font-size: .79rem;
+  font-weight: 500;
+  color: var(--w60);
+
+  letter-spacing: .04em;
+  margin-bottom: 28px;
+
+  backdrop-filter: blur(10px);
+
+  white-space: normal;
+  text-align: center;
 }
 .badge-dot {
   width: 7px; height: 7px; border-radius: 50%;
@@ -526,11 +542,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
     overflow: hidden;
   }
 
-  .hero-content {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .hero-heading,
 .hero-sub {
   max-width: 100%;
@@ -575,9 +586,20 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   .portfolio-item.tall { grid-row:auto;height:290px; }
   .contact-form-card { padding:22px 14px; }
   .form-row { grid-template-columns:1fr;gap:0; }
-  .footer-top    { grid-template-columns:1fr;gap:30px; }
+  .footer-top    { grid-template-columns:1fr;gap:30px;
+                    width: 100%;
+                 }
   .footer-bottom { flex-direction:column;text-align:center;gap:6px; }
+.footer-contact-link,
+.footer-links-group a,
+.footer-brand p {
+  word-break: break-word;
+}
   .btn { font-size:.85rem;padding:12px 20px; }
+  .channel-btn {
+  width: 100%;
+  overflow-wrap: break-word;
+}
 
   /* Smaller WA on mobile */
   .wa-float { width: 42px; height: 42px; bottom: 18px; right: 18px; }
