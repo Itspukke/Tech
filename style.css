@@ -264,7 +264,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   border-radius: 50px; font-size: .79rem; font-weight: 500; color: var(--w60);
   letter-spacing: .04em; margin-bottom: 28px; backdrop-filter: blur(10px);
   opacity: 0; animation: fadeUp .8s .2s forwards;
-  width: min(100%, 340px);
   margin-inline: auto;
   flex-wrap: wrap;
   justify-content: center;
