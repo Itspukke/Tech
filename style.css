@@ -633,7 +633,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 }
 
 .footer-top {
-  justify-items: center;
+  justify-items: end;
 }
 
 .footer-brand,
