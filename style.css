@@ -545,7 +545,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 .hero-heading,
 .hero-sub {
   max-width: 100%;
-.container { padding:0 16px; }
+.container {
+  padding: 0 12px;
+}
 
   /* HERO — critical mobile fixes */
   
@@ -594,6 +596,27 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 .footer-links-group a,
 .footer-brand p {
   word-break: break-word;
+}
+
+.footer,
+.footer-top,
+.footer-bottom,
+.footer-contact-col,
+.footer-contact-link,
+.footer-links-group,
+.footer-brand {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.footer-contact-link {
+  flex-wrap: wrap;
+}
+
+.footer-top {
+  overflow-x: hidden;
 }
   .btn { font-size:.85rem;padding:12px 20px; }
   .channel-btn {
