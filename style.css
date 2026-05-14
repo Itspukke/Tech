@@ -84,12 +84,15 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 
 /* ── NAVBAR ───────────────────────────────────────────────── */
 .navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  padding: calc(20px + env(safe-area-inset-top)) 0 20px;
+
   transition: background var(--t), padding var(--t);
-  transform: translateZ(0);
-  will-change: transform;
-  padding-top: env(safe-area-inset-top);
 }
 .navbar.scrolled {
   background: rgba(5,13,26,0.97);
@@ -426,11 +429,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 /* ── FLOATING WHATSAPP — small circle ────────────────────── */
 .wa-float {
   position: fixed;
-  bottom: 18px;
-  right: 18px;
-
   width: 42px;
   height: 42px;
+  bottom: 22px;
+  right: 14px;
 
   z-index: 998;
 
@@ -500,6 +502,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 }
 
 @media (max-width: 640px) {
+  .navbar {
+    padding-top: 28px;
+  }
   .container { padding:0 16px; }
 
   /* HERO — critical mobile fixes */
