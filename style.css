@@ -618,6 +618,35 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 .footer-top {
   overflow-x: hidden;
 }
+
+   .footer-top,
+.footer-bottom {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-top {
+  justify-items: center;
+}
+
+.footer-brand,
+.footer-links-group,
+.footer-contact-col {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-contact-link {
+  justify-content: center;
+}
   .btn { font-size:.85rem;padding:12px 20px; }
   .channel-btn {
   width: 100%;
