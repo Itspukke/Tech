@@ -9,9 +9,9 @@
 /* ── EMAILJS INIT ──────────────────────────────────────────── */
 // Replace YOUR_PUBLIC_KEY with your EmailJS public key
 // Sign up free at emailjs.com, create a service + template
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';   // ← replace
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // ← replace
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // ← replace
+const EMAILJS_PUBLIC_KEY  = 'pA4DXCU6zOaT-0Eyi';   // ← replace
+const EMAILJS_SERVICE_ID  = 'service_gl2wl5n';   // ← replace
+const EMAILJS_TEMPLATE_ID = 'template_n68a3sk';  // ← replace
 
 window.addEventListener('load', () => {
   if (typeof emailjs !== 'undefined') {
