@@ -90,7 +90,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 }
 .navbar.scrolled {
   background: rgba(5,13,26,0.95);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(24px);
   padding: 13px 0;
   border-bottom: 1px solid var(--glass-b);
@@ -182,9 +182,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  height: 100dvh; /* dynamic viewport height — fixes mobile browser chrome */
-  min-height: 600px;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding-top: 110px;
+  padding-bottom: 60px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -425,17 +427,18 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 /* ── FLOATING WHATSAPP — small circle ────────────────────── */
 .wa-float {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 998;
-  width: 46px;
-  height: 46px;
+  bottom: 18px;
+  right: 18px;
+  z-index: 997;
+  width: 42px;
+  height: 42px;
   background: #25D366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 18px rgba(37,211,102,.50);
+  transform: translateZ(0);
   transition: transform var(--t), box-shadow var(--t);
   animation: waFloat 3s ease-in-out infinite;
 }
@@ -494,12 +497,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   .container { padding:0 16px; }
 
   /* HERO — critical mobile fixes */
-  .hero {
-    /* Use dynamic viewport height so address bar is accounted for */
-    height: 100svh;
-    height: 100dvh;
-    min-height: 580px;
-  }
+  
   /* Disable zoom animation on mobile to prevent scroll shift */
   .hero-bg-img { animation: none !important; transform: none !important; }
   .hero-gradient-1, .hero-gradient-2 { animation: none !important; }
@@ -544,4 +542,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   .hero-heading { font-size:1.78rem; }
   .nav-container { gap:14px; }
   .logo-text { font-size:.94rem; }
+}
+.navbar {
+  padding-top: env(safe-area-inset-top);
 }
