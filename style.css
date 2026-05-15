@@ -315,9 +315,17 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 
 /* ── SERVICES ─────────────────────────────────────────────── */
 .services { padding: 110px 0; }
-.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-.services-grid .service-card:nth-child(4) { grid-column: 1; }
-.services-grid .service-card:nth-child(5) { grid-column: 3; }
+.services-grid {
+  display: grid;
+
+  /* Makes cards wider */
+  grid-template-columns: repeat(2, minmax(420px, 1fr));
+
+  /* Smaller gap between cards */
+  gap: 14px;
+
+  justify-content: center;
+}
 .service-card {
   position: relative; background: var(--glass); border: 1px solid var(--glass-b);
   border-radius: var(--radius); padding: 30px 26px 26px;
@@ -534,6 +542,20 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   .portfolio-item.tall { grid-row:auto;height:360px; }
 }
 
+/* Desktop spacing fix */
+@media (min-width: 901px) {
+
+  .services .container {
+    max-width: 1320px;
+    padding-right: 40px; /* pushes content away from scrollbar */
+    padding-left: 40px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+}
 @media (max-width: 640px) {
  
    
