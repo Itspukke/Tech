@@ -304,10 +304,24 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 .hero-sub { font-size: clamp(.96rem,1.9vw,1.14rem); font-weight:300; color:var(--w60); max-width:580px; margin:0 auto 36px; line-height:1.78; text-align:center; }
 .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .scroll-indicator {
-  position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 7px;
-  font-size: .69rem; letter-spacing:.14em; color:var(--w30); text-transform:uppercase;
-  z-index: 3; animation: fadeUp 1s 1.4s both;
+  position: absolute;
+  bottom: 14px; /* moved lower */
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  font-size: .69rem;
+  letter-spacing: .14em;
+  color: var(--w30);
+  text-transform: uppercase;
+
+  z-index: 3;
+
+  animation: fadeUp 1s 1.4s both;
 }
 .scroll-line { width:1px; height:44px; background:linear-gradient(to bottom,var(--w30),transparent); animation:scrollDrop 2s ease-in-out infinite; }
 @keyframes scrollDrop { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
