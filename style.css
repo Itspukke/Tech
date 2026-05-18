@@ -625,22 +625,33 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
   .portfolio-item.tall { grid-row:auto;height:290px; }
   .contact-form-card { padding:22px 14px; }
   .form-row { grid-template-columns:1fr;gap:0; }
-  .footer-top {
+ /* MOBILE FOOTER FIX */
+.footer {
+  padding: 60px 0 24px;
+}
+
+.footer-top {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 22px;
 
   width: 100%;
-  text-align: left;
-  justify-items: start;
+  margin-bottom: 28px;
 
-  margin-bottom: 30px;
+  align-items: start;
 }
 
 .footer-brand {
   grid-column: 1 / -1;
+
   text-align: center;
-  margin-bottom: 10px;
+
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  max-width: 320px;
+  margin: 14px auto 0;
 }
 
 .footer-links-group,
@@ -650,26 +661,50 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 
 .footer-links-group h5,
 .footer-contact-col h5 {
-  margin-bottom: 12px;
+  font-size: .82rem;
+  margin-bottom: 14px;
 }
 
 .footer-links-group ul {
-  gap: 8px;
+  gap: 10px;
+}
+
+.footer-links-group a,
+.footer-contact-link {
+  font-size: .86rem;
+  line-height: 1.5;
 }
 
 .footer-contact-link {
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  word-break: break-word;
+}
+
+.footer-contact-link svg {
+  flex-shrink: 0;
+  margin-top: 3px;
 }
 
 .footer-bottom {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 6px;
 
-  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 8px;
+
+  padding-top: 18px;
+}
+
+.footer-bottom p {
+  font-size: .75rem;
+  line-height: 1.5;
 }
   .btn { font-size:.85rem;padding:12px 20px; }
   .channel-btn {
@@ -683,8 +718,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
 
 /* Extra small phones */
 @media (max-width: 480px) {
-  .footer-top {
+   .footer-top {
     grid-template-columns: 1fr;
+    gap: 26px;
+
     text-align: center;
     justify-items: center;
   }
@@ -694,11 +731,15 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; vertical-ali
     text-align: center;
   }
 
+  .footer-links-group ul {
+    align-items: center;
+  }
+
   .footer-contact-link {
     justify-content: center;
   }
-}
 
+}
 @media (max-width: 380px) {
   .hero-heading { font-size:1.78rem; }
   .nav-container { gap:14px; }
